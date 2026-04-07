@@ -13,7 +13,9 @@ const hasGitHistory =
   }).status === 0;
 
 const projectName = 'guides';
+const defaultBaseUrl = '/';
 const githubPagesBaseUrl = `/${projectName}/`;
+const baseUrl = process.env.DOCUSAURUS_BASE_URL ?? defaultBaseUrl;
 
 const config: Config = {
   title: 'Nebulosa',
@@ -26,7 +28,7 @@ const config: Config = {
   },
 
   url: 'https://fabioluciano.github.io',
-  baseUrl: githubPagesBaseUrl,
+  baseUrl,
 
   organizationName: 'fabioluciano',
   projectName,
@@ -69,12 +71,12 @@ const config: Config = {
           {
             tagName: 'link',
             rel: 'icon',
-            href: `${githubPagesBaseUrl}img/logo.svg`,
+            href: `${baseUrl}img/logo.svg`,
           },
           {
             tagName: 'link',
             rel: 'manifest',
-            href: `${githubPagesBaseUrl}manifest.json`,
+            href: `${baseUrl}manifest.json`,
           },
           {
             tagName: 'meta',
@@ -94,7 +96,7 @@ const config: Config = {
           {
             tagName: 'link',
             rel: 'apple-touch-icon',
-            href: `${githubPagesBaseUrl}img/logo.svg`,
+            href: `${baseUrl}img/logo.svg`,
           },
         ],
       },
