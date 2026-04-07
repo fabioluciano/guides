@@ -19,19 +19,19 @@ const categories: CategoryItem[] = [
     title: 'Kubernetes',
     emoji: '☸️',
     description: 'Certificações, componentes do cluster, e fundamentos do Kubernetes',
-    link: '/docs/kubernetes',
+    link: '/kubernetes',
   },
   {
     title: 'Istio',
     emoji: '🔷',
     description: 'Service mesh, observabilidade e gerenciamento de tráfego',
-    link: '/docs/istio',
+    link: '/istio',
   },
   {
     title: 'Kyverno',
     emoji: '📋',
     description: 'Policy as Code para Kubernetes',
-    link: '/docs/kyverno',
+    link: '/kyverno',
   },
 ];
 

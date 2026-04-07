@@ -14,7 +14,6 @@ const hasGitHistory =
 
 const projectName = 'guides';
 const defaultBaseUrl = '/';
-const githubPagesBaseUrl = `/${projectName}/`;
 const baseUrl = process.env.DOCUSAURUS_BASE_URL ?? defaultBaseUrl;
 
 const config: Config = {
@@ -108,6 +107,7 @@ const config: Config = {
       'classic',
       {
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           editUrl: undefined,
           remarkPlugins: [remarkMath],
@@ -152,11 +152,11 @@ const config: Config = {
           items: [
             {
               label: 'Início',
-              to: '/docs/intro',
+              to: '/intro',
             },
             {
               label: 'Kubernetes',
-              to: '/docs/kubernetes',
+              to: '/kubernetes',
             },
           ],
         },
@@ -165,15 +165,15 @@ const config: Config = {
           items: [
             {
               label: 'CKA',
-              to: '/docs/kubernetes/certifications/cka',
+              to: '/kubernetes/certifications/cka',
             },
             {
               label: 'CKAD',
-              to: '/docs/kubernetes/certifications/ckad',
+              to: '/kubernetes/certifications/ckad',
             },
             {
               label: 'CKS',
-              to: '/docs/kubernetes/certifications/cks',
+              to: '/kubernetes/certifications/cks',
             },
           ],
         },
